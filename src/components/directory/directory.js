@@ -17,27 +17,27 @@ class Directory extends React.Component{
                 title: 'JACKETS',
                 imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
                 id: 2,
-                linkUrl: 'shop/jackets'
+                linkUrl: 'jackets'
               },
               {
                 title: 'SNEAKERS',
                 imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
                 id: 3,
-                linkUrl: 'shop/sneakers'
+                linkUrl: 'sneakers'
               },
               {
                 title: 'WOMENS',
                 imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
                 size: 'large',
                 id: 4,
-                linkUrl: 'shop/womens'
+                linkUrl: 'womens'
               },
               {
                 title: 'MENS',
                 imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
                 size: 'large',
                 id: 5,
-                linkUrl: 'shop/mens'
+                linkUrl: 'mens'
               }]
         }
     }
