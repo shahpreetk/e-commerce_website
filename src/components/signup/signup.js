@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import FormInput from "../form-input/form-input";
 import CustomButton from "../custom-button/custom-button";
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 import "./signup.scss";
 
-function SignUp() {
-  useState({
-    displayName: "",
+class SignUp extends Component {
+  constructor(){
+      super();
+      this.state = {
+        displayName: "",
     email: "",
     password: "",
     confirmPassword: "",
-  });
+      } 
+  }
 
-  handleSubmit = async (event) => {
+handleSubmit = async (event)=> {
     event.preventDefault();
     const { displayName, email, password, confirmPassword } = this.state;
     if (password !== confirmPassword) {
@@ -34,14 +37,14 @@ function SignUp() {
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 
-  handleChange = async (event) => {
+ handleChange = async (event) =>{
     const { name, value } = event.target;
 
-    this.setState({[name]:value});
-  };
-
+    this.setState({ [name]: value });
+  }
+render(){
   const { displayName, email, password, confirmPassword } = this.state;
   return (
     <div className="sign-up">
@@ -85,5 +88,6 @@ function SignUp() {
     </div>
   );
 }
+};
 
 export default SignUp;
